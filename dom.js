@@ -9,3 +9,5 @@ for(let i=0 ; i<y.length;i++)
 {
     y[i].style.fontWeight= "bold";
 }
+var z= document.getElementsByTagName("li")[4];
+z.style.backgroundColor= "red";
