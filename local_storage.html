@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+background-color: orange;
+text-align: center;
+
+        }
+        input{
+            width:500px;
+        }
+    </style>
+</head>
+<body>
+    <form onsubmit="print()" >
+        <label>Name</label>
+        <input type="text" id= "1" name="username" required>
+    </br>
+           <label>Email</label>
+        <input type="email" id= "2" name="email" required>
+         </br>
+           <label>password</label>
+        <input type="password" id= "3" name="password" required>
+         </br>
+        <input type="submit" value = "submit">
+
+
+
+    </form>
+    <script>
+        function print()
+        {
+       var name  = document.getElementById('1').value;
+       var email = document.getElementById('2').value;
+       var pass = document.getElementById('3').value;
+       localStorage.setItem(name,email);
+       document.write(name+"<br>");
+       
+       document.write(email+"<br>");
+       
+       document.write(pass);
+      
+            
+        }
+
+    </script>
+    
+</body>
+</html>
