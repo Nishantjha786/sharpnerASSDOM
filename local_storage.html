@@ -37,7 +37,21 @@ text-align: center;
        var name  = document.getElementById('1').value;
        var email = document.getElementById('2').value;
        var pass = document.getElementById('3').value;
-       localStorage.setItem(name,email);
+       let myobj={
+        
+    };
+
+    myobj['name']=name;
+    myobj['email']= email; 
+
+    let myobj_serial = JSON.stringify(myobj);
+
+
+    localStorage.setItem("myobj",myobj_serial);
+   
+
+    let myobj_deserial = JSON.parse(localStorage.getItem("myobj"));
+    console.log(myobj_deserial);
        document.write(name+"<br>");
        
        document.write(email+"<br>");
