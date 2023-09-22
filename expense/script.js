@@ -38,11 +38,18 @@ var app = new function() {
     myobj['exp_amt1']=exp_amt1;
     myobj['desc']= desc; 
     myobj['cat_name']= cat_name; 
+axios.post("https://crudcrud.com/api/8d1745785e184f19ac6dbb9ed2d94edc/appointdata",myobj)
+.then((response)=>{
+  showNewUserOnScreen(response.data)
+  console.log(response)
+})
+.catch((err)=>{
+  console.log(err)
+})
+    //let myobj_serial = JSON.stringify(myobj);
 
-    let myobj_serial = JSON.stringify(myobj);
 
-
-    localStorage.setItem("myobj",myobj_serial);
+  ///  localStorage.setItem("myobj",myobj_serial);
     if (task) {
       // Add the new value
       this.tasks.push(task.trim());
